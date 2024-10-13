@@ -1,11 +1,12 @@
 from Image import Imagem
-from Predicao import Predicao
+from Predicao import PredicaoAlzheimer, PredicaoEM
 
 def main():
     image = Imagem.LeituraImagem()
     if image is not None:
-        resultado = Predicao.PredicaoImagem(image)
-        print(resultado)
+        resultadoAlzheimer = PredicaoAlzheimer.PredicaoImagem(image)
+        resultadoEM = PredicaoEM.PredicaoImagem(image)
+        print(resultadoAlzheimer, resultadoEM)
 
 if __name__ == '__main__':
     main()

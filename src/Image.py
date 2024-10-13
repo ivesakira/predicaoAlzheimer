@@ -4,7 +4,7 @@ import cv2
 import os
 
 class Imagem:
-    inputPath = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Input')
+    inputPath = os.getcwd() + '\\Input'
     tamanhoPadrao = 100
 
     def LeituraImagem():
